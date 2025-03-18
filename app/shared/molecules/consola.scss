@@ -1,0 +1,16 @@
+.atom-consola {
+	.point::after {
+		content: "\2022";
+		flex: 1;
+		font-size: 3rem;
+	}
+	.green::after {
+		color: #2cc640;
+	}
+	.yellow::after {
+		color: #fdbf2e;
+	}
+	.red::after {
+		color: #fe6256;
+	}
+}
