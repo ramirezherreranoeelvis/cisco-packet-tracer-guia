@@ -2,7 +2,7 @@ import "./consola.scss";
 interface IConsola {
 	title: string;
 	width: string;
-	children:React.ReactNode
+	children: React.ReactNode;
 }
 export default function Consola({ title, width, children }: IConsola) {
 	return (
