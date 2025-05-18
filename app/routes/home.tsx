@@ -1,30 +1,39 @@
-import Consola from "~/shared/molecules/consola";
+import { Outlet } from "react-router";
 import type { Route } from "./+types/home";
-import data from "./data";
+import Link from "~/shared/atoms/link";
 
 export function meta({}: Route.MetaArgs) {
-	return [
-		{ title: "New React Router App" },
-		{ name: "description", content: "Welcome to React Router!" },
-	];
+      return [
+            { title: "New React Router App" },
+            { name: "description", content: "Welcome to React Router!" },
+      ];
 }
 
 export default function Home() {
-	return (
-		<div className="h-[100vh] flex justify-center items-center">
-			<div
-				className="flex justify-center items-center flex-wrap gap-y-4 gap-x-8 
-					   max-w-[95%] max-h-[70%] overflow-auto"
-			>
-				<Consolas />
-			</div>
-		</div>
-	);
+      return (
+            <>
+                  <header></header>
+                  <nav>
+                        <ul>
+                              <Li
+                                    className=""
+                                    href="computo-1"
+                                    text="computo-1 s1"
+                              />
+                              <Li
+                                    className=""
+                                    href="computo-2"
+                                    text="computo-2 s1"
+                              />
+                        </ul>
+                  </nav>
+                  <Outlet />
+                  <footer></footer>
+            </>
+      );
 }
-const Consolas = () => {
-	return data.flatMap((x) => (
-		<Consola title={x.title} width={"w-[570px]"}>
-			{x.children}
-		</Consola>
-	));
-};
+const Li = ({ className = "", text = "", href }: A) => (
+      <li>
+            <Link className={className} text={text} href={href}></Link>
+      </li>
+);
