@@ -17,6 +17,9 @@ const index = () => {
                   <main>
                         <section>
                               <h1>¿Qué es SSH y Telnet?</h1>
+
+                              <br />
+                              <p>si el prefijo de la ip es /24 la submask es 255.255.255.0</p>
                         </section>
                   </main>
             </>
